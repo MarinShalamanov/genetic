@@ -1,12 +1,13 @@
 var Task = require('../lib').Task
   , options = { getRandomSolution : getRandomSolution
-              , popSize : 500
+              , popSize : 50
+              , elitismSize: 20
               , stopCriteria : stopCriteria
               , fitness : fitness
               , minimize : false
               , mutateProbability : 0.1
               , mutate : mutate
-              , crossoverProbability : 0.3
+              , crossoverProbability : 0.8
               , crossover : crossover
               }
   , util = require('util')
@@ -93,7 +94,9 @@ var
 // 
 // 
 // t.on('reproduction end', function (children) { console.log('reproduction end',children) })
-// 
+//
+
+t.on('statistics', function (statistics) { console.log(statistics.maxScore)})
 t.on('error', function (error) { console.log('ERROR - ', error) })
 t.run(function (stats) { console.log('results', stats)})
 
