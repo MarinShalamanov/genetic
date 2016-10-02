@@ -1,14 +1,7 @@
 # Genetic
 
 Genetic is a [node.js](http://nodejs.org) implementation of genetic optimization algorithms. It's pretty asyncronous, so you can use it in your web applications without risking of blocking your application.
-
-## Download
-
-Releases are available for download from
-[GitHub](https://github.com/dolphin278/genetic/downloads).
-Alternatively, you can install using Node Package Manager (npm):
-
-    npm install genetic
+This fork of the library enables **elitism** to the library.
 
 ## How to use
 
